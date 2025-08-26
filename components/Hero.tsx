@@ -34,7 +34,7 @@ export default function Hero() {
           {/* 关键指标 */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 pt-16 border-t border-chain-accent/30">
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-chain-highlight mb-2">10,000+</div>
+              <div className="text-3xl md:text-4xl font-bold text-chain-highlight mb-2">100,000+</div>
               <div className="text-gray-300">TPS 处理能力</div>
             </div>
             <div className="text-center">

@@ -95,7 +95,7 @@ export default function Technology() {
         {/* 性能指标 */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
           <div className="bg-chain-primary p-6 rounded-xl text-center border border-chain-accent/20">
-            <div className="text-3xl font-bold text-chain-highlight mb-2">10,000+</div>
+            <div className="text-3xl font-bold text-chain-highlight mb-2">100,000+</div>
             <div className="text-gray-300">TPS</div>
           </div>
           <div className="bg-chain-primary p-6 rounded-xl text-center border border-chain-accent/20">
