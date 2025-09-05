@@ -6,7 +6,7 @@ export default function Whitepaper() {
       title: "技术白皮书",
       description: "深入了解 NBCoin (NBC) 的技术架构、共识机制和核心特性",
       icon: "📋",
-      link: "https://docs.nbcoin.io/whitepaper",
+      link: "/whitepaper.pdf?v=" + Date.now(),
       type: "PDF"
     },
     {
