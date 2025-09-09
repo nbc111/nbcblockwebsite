@@ -23,6 +23,24 @@ export default function Header() {
             <a href="#benefits" className="text-gray-300 hover:text-white transition-colors">优势</a>
             <a href="#technology" className="text-gray-300 hover:text-white transition-colors">技术</a>
             <a href="#whitepaper" className="text-gray-300 hover:text-white transition-colors">白皮书</a>
+            <button 
+              onClick={() => {
+                const userAgent = navigator.userAgent.toLowerCase()
+                if (userAgent.includes('android')) {
+                  window.open('https://play.google.com/store/apps/details?id=com.nbcoin.wallet', '_blank')
+                } else if (userAgent.includes('iphone') || userAgent.includes('ipad')) {
+                  window.open('https://apps.apple.com/app/nbcoin-wallet/id123456789', '_blank')
+                } else {
+                  alert('请使用手机扫描二维码下载钱包App，或访问 https://wallet.nbcoin.io 下载')
+                }
+              }}
+              className="text-chain-highlight hover:text-white transition-colors font-semibold flex items-center space-x-1"
+            >
+              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M21 7h-3V6a3 3 0 0 0-3-3H5a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3v-1h3a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1zM5 4h10a1 1 0 0 1 1 1v1H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1zm11 14a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V8h12v10zm2-2h-2v-2h2v2z"/>
+              </svg>
+              <span>钱包</span>
+            </button>
           </nav>
 
           {/* CTA Button */}
@@ -54,6 +72,24 @@ export default function Header() {
               <a href="#benefits" className="block px-3 py-2 text-gray-300 hover:text-white transition-colors">优势</a>
               <a href="#technology" className="block px-3 py-2 text-gray-300 hover:text-white transition-colors">技术</a>
               <a href="#whitepaper" className="block px-3 py-2 text-gray-300 hover:text-white transition-colors">白皮书</a>
+              <button 
+                onClick={() => {
+                  const userAgent = navigator.userAgent.toLowerCase()
+                  if (userAgent.includes('android')) {
+                    window.open('https://play.google.com/store/apps/details?id=com.nbcoin.wallet', '_blank')
+                  } else if (userAgent.includes('iphone') || userAgent.includes('ipad')) {
+                    window.open('https://apps.apple.com/app/nbcoin-wallet/id123456789', '_blank')
+                  } else {
+                    alert('请使用手机扫描二维码下载钱包App，或访问 https://wallet.nbcoin.io 下载')
+                  }
+                }}
+                className="block w-full px-3 py-2 text-left text-chain-highlight hover:text-white transition-colors font-semibold flex items-center space-x-2"
+              >
+                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M21 7h-3V6a3 3 0 0 0-3-3H5a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3v-1h3a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1zM5 4h10a1 1 0 0 1 1 1v1H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1zm11 14a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V8h12v10zm2-2h-2v-2h2v2z"/>
+                </svg>
+                <span>钱包</span>
+              </button>
               <div className="pt-4">
                 <button 
                   onClick={() => window.open('https://docs.nbcoin.io', '_blank')}
