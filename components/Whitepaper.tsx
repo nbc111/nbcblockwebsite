@@ -34,22 +34,22 @@ export default function Whitepaper() {
 
   const milestones = [
     {
-      quarter: "Q1 2024",
+      quarter: "Q1 2025",
       title: "主网启动",
       description: "NBCoin 主网正式上线，支持基础交易功能"
     },
     {
-      quarter: "Q2 2024", 
+      quarter: "Q2 2025", 
       title: "智能合约",
       description: "发布智能合约平台，支持 DApp 开发"
     },
     {
-      quarter: "Q3 2024",
+      quarter: "Q3 2025",
       title: "跨链桥接",
       description: "实现与其他主流公链的资产互通"
     },
     {
-      quarter: "Q4 2024",
+      quarter: "Q4 2025",
       title: "生态扩展",
       description: "构建完整的 DeFi 生态系统"
     }
