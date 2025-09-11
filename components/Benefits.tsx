@@ -1,13 +1,18 @@
+'use client'
+
+import { useTranslation } from '@/lib/i18n/useLocale'
+
 export default function Benefits() {
+  const { t } = useTranslation()
   return (
     <section id="benefits" className="section-padding bg-chain-primary">
       <div className="container-custom">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            为什么选择 NBCoin (NBC)？
+            {t('benefits.title')}
           </h2>
-                          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            我们专注于解决区块链开发中的核心痛点：性能、安全性和可扩展性
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            {t('benefits.description')}
           </p>
         </div>
 
@@ -21,8 +26,8 @@ export default function Benefits() {
                 </svg>
               </div>
               <div>
-                <h3 className="text-xl font-semibold text-white mb-2">网络稳定性</h3>
-                <p className="text-gray-300">采用先进的共识机制和容错技术，确保网络高可用性，满足去中心化应用的严格要求。</p>
+                <h3 className="text-xl font-semibold text-white mb-2">{t('benefits.networkStability')}</h3>
+                <p className="text-gray-300">{t('benefits.networkStabilityDesc')}</p>
               </div>
             </div>
 
@@ -33,8 +38,8 @@ export default function Benefits() {
                 </svg>
               </div>
               <div>
-                <h3 className="text-xl font-semibold text-white mb-2">安全防护</h3>
-                <p className="text-gray-300">多层安全防护机制，包括智能合约审计、漏洞检测和实时威胁监控，保护您的资产安全。</p>
+                <h3 className="text-xl font-semibold text-white mb-2">{t('benefits.security')}</h3>
+                <p className="text-gray-300">{t('benefits.securityDesc')}</p>
               </div>
             </div>
 
@@ -45,8 +50,8 @@ export default function Benefits() {
                 </svg>
               </div>
               <div>
-                <h3 className="text-xl font-semibold text-white mb-2">高性能</h3>
-                <p className="text-gray-300">优化的网络架构和智能路由，支持高并发交易处理，提供高性能的交易处理能力。</p>
+                <h3 className="text-xl font-semibold text-white mb-2">{t('benefits.performance')}</h3>
+                <p className="text-gray-300">{t('benefits.performanceDesc')}</p>
               </div>
             </div>
           </div>
@@ -60,8 +65,8 @@ export default function Benefits() {
                 </svg>
               </div>
               <div>
-                <h3 className="text-xl font-semibold text-white mb-2">无限扩展</h3>
-                <p className="text-gray-300">支持水平扩展，采用分片技术和 Layer 2 解决方案，可根据业务需求动态调整网络容量。</p>
+                <h3 className="text-xl font-semibold text-white mb-2">{t('benefits.unlimitedScaling')}</h3>
+                <p className="text-gray-300">{t('benefits.unlimitedScalingDesc')}</p>
               </div>
             </div>
 
@@ -72,8 +77,8 @@ export default function Benefits() {
                 </svg>
               </div>
               <div>
-                <h3 className="text-xl font-semibold text-white mb-2">模块化设计</h3>
-                <p className="text-gray-300">采用模块化架构，支持插件式扩展，可以轻松添加新功能和集成第三方服务。</p>
+                <h3 className="text-xl font-semibold text-white mb-2">{t('benefits.modularDesign')}</h3>
+                <p className="text-gray-300">{t('benefits.modularDesignDesc')}</p>
               </div>
             </div>
 
@@ -84,8 +89,8 @@ export default function Benefits() {
                 </svg>
               </div>
               <div>
-                <h3 className="text-xl font-semibold text-white mb-2">生态兼容</h3>
-                <p className="text-gray-300">支持多种区块链标准和协议，实现与其他公链的互操作性，构建完整的区块链生态。</p>
+                <h3 className="text-xl font-semibold text-white mb-2">{t('benefits.ecosystemCompatibility')}</h3>
+                <p className="text-gray-300">{t('benefits.ecosystemCompatibilityDesc')}</p>
               </div>
             </div>
           </div>

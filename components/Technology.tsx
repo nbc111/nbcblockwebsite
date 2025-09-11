@@ -1,25 +1,28 @@
 'use client'
 
+import { useTranslation } from '@/lib/i18n/useLocale'
+
 export default function Technology() {
+  const { t } = useTranslation()
   const techFeatures = [
     {
-      title: "共识机制",
-      description: "采用改进的PoS共识算法，确保网络安全性和交易确认速度",
+      title: t('technology.consensus'),
+      description: t('technology.consensusDesc'),
       icon: "🔐"
     },
     {
-      title: "智能合约",
-      description: "支持多种编程语言，提供安全的智能合约执行环境",
+      title: t('technology.smartContracts'),
+      description: t('technology.smartContractsDesc'),
       icon: "📜"
     },
     {
-      title: "跨链桥接",
-      description: "内置跨链桥接功能，实现多链资产互通",
+      title: t('technology.crossChain'),
+      description: t('technology.crossChainDesc'),
       icon: "🌉"
     },
     {
-      title: "隐私保护",
-      description: "零知识证明技术，保护用户交易隐私",
+      title: t('technology.privacy'),
+      description: t('technology.privacyDesc'),
       icon: "🕵️"
     }
   ]
@@ -29,10 +32,10 @@ export default function Technology() {
       <div className="container-custom">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            技术架构
+            {t('technology.title')}
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            基于先进的区块链技术构建，采用分层架构设计，确保性能、安全性和可扩展性的完美平衡
+            {t('technology.description')}
           </p>
         </div>
 
@@ -41,8 +44,8 @@ export default function Technology() {
           <div className="bg-chain-primary p-8 rounded-xl border border-chain-accent/20">
             <div className="space-y-6">
               <div className="text-center">
-                <div className="text-2xl font-bold text-chain-highlight mb-2">应用层</div>
-                <div className="text-gray-300">DApps, 智能合约, API</div>
+                <div className="text-2xl font-bold text-chain-highlight mb-2">{t('technology.applicationLayer')}</div>
+                <div className="text-gray-300">{t('technology.applicationLayerDesc')}</div>
               </div>
               
               <div className="flex justify-center">
@@ -50,8 +53,8 @@ export default function Technology() {
               </div>
               
               <div className="text-center">
-                <div className="text-2xl font-bold text-chain-highlight mb-2">共识层</div>
-                <div className="text-gray-300">PoS, 验证节点, 区块生成</div>
+                <div className="text-2xl font-bold text-chain-highlight mb-2">{t('technology.consensusLayer')}</div>
+                <div className="text-gray-300">{t('technology.consensusLayerDesc')}</div>
               </div>
               
               <div className="flex justify-center">
@@ -59,8 +62,8 @@ export default function Technology() {
               </div>
               
               <div className="text-center">
-                <div className="text-2xl font-bold text-chain-highlight mb-2">网络层</div>
-                <div className="text-gray-300">P2P网络, 节点发现, 数据传输</div>
+                <div className="text-2xl font-bold text-chain-highlight mb-2">{t('technology.networkLayer')}</div>
+                <div className="text-gray-300">{t('technology.networkLayerDesc')}</div>
               </div>
               
               <div className="flex justify-center">
@@ -68,8 +71,8 @@ export default function Technology() {
               </div>
               
               <div className="text-center">
-                <div className="text-2xl font-bold text-chain-highlight mb-2">数据层</div>
-                <div className="text-gray-300">区块链, 状态存储, 默克尔树</div>
+                <div className="text-2xl font-bold text-chain-highlight mb-2">{t('technology.dataLayer')}</div>
+                <div className="text-gray-300">{t('technology.dataLayerDesc')}</div>
               </div>
             </div>
           </div>
@@ -96,19 +99,19 @@ export default function Technology() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
           <div className="bg-chain-primary p-6 rounded-xl text-center border border-chain-accent/20">
             <div className="text-3xl font-bold text-chain-highlight mb-2">100,000+</div>
-            <div className="text-gray-300">TPS</div>
+            <div className="text-gray-300">{t('technology.tps')}</div>
           </div>
           <div className="bg-chain-primary p-6 rounded-xl text-center border border-chain-accent/20">
-            <div className="text-3xl font-bold text-chain-highlight mb-2">&lt; 3秒</div>
-            <div className="text-gray-300">确认时间</div>
+            <div className="text-3xl font-bold text-chain-highlight mb-2">&lt; 3{t('technology.seconds')}</div>
+            <div className="text-gray-300">{t('technology.confirmationTime')}</div>
           </div>
           <div className="bg-chain-primary p-6 rounded-xl text-center border border-chain-accent/20">
-            <div className="text-3xl font-bold text-chain-highlight mb-2">高</div>
-            <div className="text-gray-300">可用性</div>
+            <div className="text-3xl font-bold text-chain-highlight mb-2">{t('technology.high')}</div>
+            <div className="text-gray-300">{t('technology.availability')}</div>
           </div>
           <div className="bg-chain-primary p-6 rounded-xl text-center border border-chain-accent/20">
-            <div className="text-3xl font-bold text-chain-highlight mb-2">分片</div>
-            <div className="text-gray-300">扩展性</div>
+            <div className="text-3xl font-bold text-chain-highlight mb-2">{t('technology.sharding')}</div>
+            <div className="text-gray-300">{t('technology.scalability')}</div>
           </div>
         </div>
       </div>

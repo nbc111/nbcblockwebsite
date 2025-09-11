@@ -1,34 +1,40 @@
+'use client'
+
+import { useTranslation } from '@/lib/i18n/useLocale'
+
 export default function Features() {
+  const { t } = useTranslation()
+  
   const features = [
     {
       icon: "🚀",
-      title: "开发者友好",
-      description: "提供完整的开发工具链、SDK 和 API，支持多种编程语言，让开发者快速构建和部署智能合约。"
+      title: t('features.rapidDevelopment'),
+      description: t('features.rapidDevelopmentDesc')
     },
     {
       icon: "🛡️",
-      title: "稳定可靠",
-      description: "99.9%的系统稳定性，采用先进的共识机制和容错技术，确保网络持续运行。"
+      title: t('features.stability'),
+      description: t('features.stabilityDesc')
     },
     {
       icon: "📈",
-      title: "水平扩展",
-      description: "采用分片技术和 Layer 2 解决方案，支持水平扩展，可根据业务需求动态调整网络容量和性能。"
+      title: t('features.scalability'),
+      description: t('features.scalabilityDesc')
     },
     {
       icon: "🔧",
-      title: "易于维护",
-      description: "提供完整的监控、日志和运维工具，让系统维护变得简单高效。"
+      title: t('features.maintainability'),
+      description: t('features.maintainabilityDesc')
     },
     {
       icon: "🌐",
-      title: "跨链互操作",
-      description: "支持多种区块链标准和协议，实现与其他公链的互操作性和资产转移，构建完整的区块链生态。"
+      title: t('features.crossChain'),
+      description: t('features.crossChainDesc')
     },
     {
       icon: "💼",
-      title: "社区驱动",
-      description: "开源透明，社区治理，开发者共同参与生态建设和决策。"
+      title: t('features.communityDriven'),
+      description: t('features.communityDrivenDesc')
     }
   ]
 
@@ -37,10 +43,10 @@ export default function Features() {
       <div className="container-custom">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            核心特性
+            {t('features.title')}
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            专为高性能、安全和可扩展而设计的 Layer 1 公链平台，为开发者提供完整的区块链基础设施
+            {t('features.description')}
           </p>
         </div>
 

@@ -1,6 +1,6 @@
 export const i18nConfig = {
   // 默认语言
-  defaultLocale: 'zh-CN',
+  defaultLocale: 'en-US',
   
   // 支持的语言列表
   locales: ['zh-CN', 'en-US'],
@@ -13,7 +13,7 @@ export const i18nConfig = {
   
   // 语言切换器配置
   localeSwitcher: {
-    show: false, // 当前阶段隐藏，未来可启用
+    show: true, // 启用语言切换器
     position: 'header' // 位置：header, footer, sidebar
   }
 }
@@ -27,7 +27,7 @@ export const localeDetection = {
   supportedLocales: ['zh-CN', 'en-US'],
   
   // 回退语言
-  fallbackLocale: 'zh-CN'
+  fallbackLocale: 'en-US'
 }
 
 // 路由配置

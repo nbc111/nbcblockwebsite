@@ -1,57 +1,60 @@
 'use client'
 
+import { useTranslation } from '@/lib/i18n/useLocale'
+
 export default function Whitepaper() {
+  const { t } = useTranslation()
   const documents = [
     {
-      title: "技术白皮书",
-      description: "深入了解 NBCoin (NBC) 的技术架构、共识机制和核心特性",
+      title: t('whitepaper.whitepaper'),
+      description: t('whitepaper.whitepaperDesc'),
       icon: "📋",
       link: "/whitepaper.pdf?v=" + Date.now(),
-      type: "PDF"
+      type: t('whitepaper.pdf')
     },
     {
-      title: "技术文档",
-      description: "开发者指南、API 文档和智能合约示例",
+      title: t('whitepaper.technicalDocs'),
+      description: t('whitepaper.technicalDocsDesc'),
       icon: "📚",
       link: "https://docs.nbcoin.io",
-      type: "在线文档"
+      type: t('whitepaper.onlineDocs')
     },
     {
-      title: "路线图",
-      description: "查看 NBCoin (NBC) 的发展规划和里程碑",
+      title: t('whitepaper.roadmap'),
+      description: t('whitepaper.roadmapDesc'),
       icon: "🗺️",
       link: "https://nbcoin.io/roadmap",
-      type: "网页"
+      type: t('whitepaper.webpage')
     },
     {
-      title: "演示视频",
-      description: "观看平台功能演示和操作指南",
+      title: t('whitepaper.demoVideo'),
+      description: t('whitepaper.demoVideoDesc'),
       icon: "🎥",
       link: "https://nbcoin.io/demo",
-      type: "视频"
+      type: t('whitepaper.video')
     }
   ]
 
   const milestones = [
     {
       quarter: "Q1 2025",
-      title: "主网启动",
-      description: "NBCoin 主网正式上线，支持基础交易功能"
+      title: t('whitepaper.mainnetLaunch'),
+      description: t('whitepaper.mainnetLaunchDesc')
     },
     {
       quarter: "Q2 2025", 
-      title: "智能合约",
-      description: "发布智能合约平台，支持 DApp 开发"
+      title: t('whitepaper.smartContracts'),
+      description: t('whitepaper.smartContractsDesc')
     },
     {
       quarter: "Q3 2025",
-      title: "跨链桥接",
-      description: "实现与其他主流公链的资产互通"
+      title: t('whitepaper.crossChain'),
+      description: t('whitepaper.crossChainDesc')
     },
     {
       quarter: "Q4 2025",
-      title: "生态扩展",
-      description: "构建完整的 DeFi 生态系统"
+      title: t('whitepaper.ecosystemExpansion'),
+      description: t('whitepaper.ecosystemExpansionDesc')
     }
   ]
 
@@ -60,10 +63,10 @@ export default function Whitepaper() {
       <div className="container-custom">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            了解更多
+            {t('whitepaper.title')}
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            深入了解 NBCoin (NBC) 的技术细节、发展规划和生态系统
+            {t('whitepaper.description')}
           </p>
         </div>
 
@@ -97,10 +100,10 @@ export default function Whitepaper() {
         {/* 发展路线图 */}
         <div className="text-center mb-12">
           <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
-            发展路线图
+            {t('whitepaper.roadmapTitle')}
           </h3>
           <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-            清晰的规划确保 NBCoin (NBC) 稳步发展，为用户提供可靠的服务
+            {t('whitepaper.roadmapDescription')}
           </p>
         </div>
 
@@ -133,7 +136,7 @@ export default function Whitepaper() {
         {/* 社区链接 */}
         <div className="text-center mt-16">
           <h3 className="text-2xl font-bold text-white mb-6">
-            加入我们的社区
+            {t('whitepaper.joinCommunity')}
           </h3>
           <div className="flex flex-wrap justify-center gap-4">
             <a

@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react'
 import QRCode from 'qrcode'
+import { useTranslation } from '@/lib/i18n/useLocale'
 
 interface QRCodeModalProps {
   isOpen: boolean
@@ -15,6 +16,7 @@ export default function QRCodeModal({ isOpen, onClose, downloadUrl, appName }: Q
   const modalRef = useRef<HTMLDivElement>(null)
   const [qrGenerated, setQrGenerated] = useState(false)
   const [isVisible, setIsVisible] = useState(false)
+  const { t } = useTranslation()
 
   // 生成二维码
   useEffect(() => {
@@ -106,7 +108,7 @@ export default function QRCodeModal({ isOpen, onClose, downloadUrl, appName }: Q
         <button
           onClick={onClose}
           className="absolute top-4 right-4 p-2 text-gray-400 hover:text-gray-600 hover:bg-gray-100 rounded-full transition-all duration-200 z-10"
-          aria-label="关闭"
+          aria-label={t('common.close')}
         >
           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -115,15 +117,15 @@ export default function QRCodeModal({ isOpen, onClose, downloadUrl, appName }: Q
 
         {/* 标题 */}
         <div className="text-center px-6 pt-6 pb-4">
-          <h3 className="text-xl font-bold text-gray-900 mb-2">下载 {appName}</h3>
-          <p className="text-sm text-gray-600">使用手机扫描二维码下载</p>
+          <h3 className="text-xl font-bold text-gray-900 mb-2">{t('modal.downloadWallet')}</h3>
+          <p className="text-sm text-gray-600">{t('modal.scanQRCode')}</p>
         </div>
 
         {/* 二维码 */}
         <div className="px-6 pb-4">
           <div className="bg-gray-50 rounded-xl p-4 text-center">
             <canvas ref={canvasRef} className="block mx-auto" />
-            <p className="text-xs text-gray-500 mt-2">扫描二维码下载应用</p>
+            <p className="text-xs text-gray-500 mt-2">{t('modal.scanToDownload')}</p>
           </div>
         </div>
 
@@ -139,7 +141,7 @@ export default function QRCodeModal({ isOpen, onClose, downloadUrl, appName }: Q
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
             </svg>
-            <span>直接下载 APK</span>
+            <span>{t('modal.directDownload')}</span>
           </a>
           
           {/* 访问钱包网站按钮 */}
@@ -152,7 +154,7 @@ export default function QRCodeModal({ isOpen, onClose, downloadUrl, appName }: Q
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
             </svg>
-            <span>访问钱包网站</span>
+            <span>{t('modal.visitWebsite')}</span>
           </a>
         </div>
       </div>

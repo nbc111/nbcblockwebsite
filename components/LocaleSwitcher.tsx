@@ -4,7 +4,7 @@ import { useTranslation } from '@/lib/i18n/useLocale'
 import { i18nConfig } from '@/lib/i18n/config'
 
 export default function LocaleSwitcher() {
-  const { locale, setLocale } = useTranslation()
+  const { locale, setLocale, t } = useTranslation()
 
   // 当前阶段隐藏语言切换器
   if (!i18nConfig.localeSwitcher.show) {
@@ -18,7 +18,7 @@ export default function LocaleSwitcher() {
   return (
     <div className="relative inline-block text-left">
       <div className="flex items-center space-x-2">
-        <span className="text-sm text-gray-300">语言:</span>
+        <span className="text-sm text-gray-300">{t('common.language')}:</span>
         <select
           value={locale}
           onChange={(e) => handleLocaleChange(e.target.value)}
@@ -37,7 +37,7 @@ export default function LocaleSwitcher() {
 
 // 移动端语言切换器
 export function MobileLocaleSwitcher() {
-  const { locale, setLocale } = useTranslation()
+  const { locale, setLocale, t } = useTranslation()
 
   // 当前阶段隐藏
   if (!i18nConfig.localeSwitcher.show) {
@@ -47,7 +47,7 @@ export function MobileLocaleSwitcher() {
   return (
     <div className="px-3 py-2 border-t border-chain-accent/20">
       <div className="flex items-center justify-between">
-        <span className="text-sm text-gray-300">语言</span>
+        <span className="text-sm text-gray-300">{t('common.language')}</span>
         <select
           value={locale}
           onChange={(e) => setLocale(e.target.value)}

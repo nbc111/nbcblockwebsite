@@ -14,7 +14,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="zh-CN">
+    <html lang="en-US">
       <body className="bg-chain-primary text-white">
         <LocaleProvider>
           {children}

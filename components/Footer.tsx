@@ -1,4 +1,9 @@
+'use client'
+
+import { useTranslation } from '@/lib/i18n/useLocale'
+
 export default function Footer() {
+  const { t } = useTranslation()
   return (
     <footer id="contact" className="bg-chain-primary border-t border-chain-accent/20">
       <div className="container-custom py-12">
@@ -12,7 +17,7 @@ export default function Footer() {
               <span className="text-xl font-bold text-white">NBCoin (NBC)</span>
             </div>
             <p className="text-gray-300 mb-4 max-w-md">
-              稳定、高效、可扩展的去中心化公链平台，为开发者提供完整的区块链基础设施和工具。
+              {t('footer.description')}
             </p>
             <div className="flex space-x-4">
               <a href="https://twitter.com/nbcoin_official" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-chain-highlight transition-colors">
@@ -35,35 +40,35 @@ export default function Footer() {
 
           {/* 产品链接 */}
           <div>
-            <h3 className="text-lg font-semibold text-white mb-4">产品</h3>
+            <h3 className="text-lg font-semibold text-white mb-4">{t('footer.products')}</h3>
             <ul className="space-y-2">
-              <li><a href="https://app.nbcoin.io/deploy" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">公链部署</a></li>
-              <li><a href="https://app.nbcoin.io/nodes" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">节点管理</a></li>
-              <li><a href="https://docs.nbcoin.io/smart-contracts" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">智能合约</a></li>
-              <li><a href="https://app.nbcoin.io/bridge" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">跨链桥接</a></li>
+              <li><a href="https://app.nbcoin.io/deploy" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">{t('footer.chainDeployment')}</a></li>
+              <li><a href="https://app.nbcoin.io/nodes" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">{t('footer.nodeManagement')}</a></li>
+              <li><a href="https://docs.nbcoin.io/smart-contracts" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">{t('footer.smartContracts')}</a></li>
+              <li><a href="https://app.nbcoin.io/bridge" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">{t('footer.crossChainBridge')}</a></li>
             </ul>
           </div>
 
           {/* 支持链接 */}
           <div>
-            <h3 className="text-lg font-semibold text-white mb-4">支持</h3>
+            <h3 className="text-lg font-semibold text-white mb-4">{t('footer.support')}</h3>
             <ul className="space-y-2">
-              <li><a href="https://docs.nbcoin.io" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">文档中心</a></li>
-              <li><a href="mailto:support@nbcoin.io" className="text-gray-300 hover:text-white transition-colors">技术支持</a></li>
-              <li><a href="https://forum.nbcoin.io" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">社区论坛</a></li>
-              <li><a href="mailto:contact@nbcoin.io" className="text-gray-300 hover:text-white transition-colors">联系我们</a></li>
+              <li><a href="https://docs.nbcoin.io" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">{t('footer.documentation')}</a></li>
+              <li><a href="mailto:support@nbcoin.io" className="text-gray-300 hover:text-white transition-colors">{t('footer.technicalSupport')}</a></li>
+              <li><a href="https://forum.nbcoin.io" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">{t('footer.communityForum')}</a></li>
+              <li><a href="mailto:contact@nbcoin.io" className="text-gray-300 hover:text-white transition-colors">{t('footer.contactUs')}</a></li>
             </ul>
           </div>
         </div>
 
         <div className="border-t border-chain-accent/20 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm">
-            © 2025 NBCoin (NBC). 保留所有权利。
+            © 2025 NBCoin (NBC). {t('footer.allRightsReserved')}
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <a href="https://nbcoin.io/privacy" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white text-sm transition-colors">隐私政策</a>
-            <a href="https://nbcoin.io/terms" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white text-sm transition-colors">服务条款</a>
-            <a href="https://nbcoin.io/cookies" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white text-sm transition-colors">Cookie政策</a>
+            <a href="https://nbcoin.io/privacy" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white text-sm transition-colors">{t('footer.privacyPolicy')}</a>
+            <a href="https://nbcoin.io/terms" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white text-sm transition-colors">{t('footer.termsOfService')}</a>
+            <a href="https://nbcoin.io/cookies" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white text-sm transition-colors">{t('footer.cookiePolicy')}</a>
           </div>
         </div>
       </div>
