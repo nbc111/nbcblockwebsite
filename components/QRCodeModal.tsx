@@ -127,8 +127,9 @@ export default function QRCodeModal({ isOpen, onClose, downloadUrl, appName }: Q
           </div>
         </div>
 
-        {/* 下载按钮 */}
-        <div className="px-6 pb-6">
+        {/* 按钮组 */}
+        <div className="px-6 pb-6 space-y-3">
+          {/* 直接下载 APK 按钮 */}
           <a
             href={downloadUrl}
             target="_blank"
@@ -139,6 +140,19 @@ export default function QRCodeModal({ isOpen, onClose, downloadUrl, appName }: Q
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
             </svg>
             <span>直接下载 APK</span>
+          </a>
+          
+          {/* 访问钱包网站按钮 */}
+          <a
+            href="http://206.238.197.207:8081/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full bg-gray-100 hover:bg-gray-200 text-gray-700 font-semibold py-3 px-4 rounded-xl transition-colors flex items-center justify-center space-x-2 border border-gray-300"
+          >
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+            <span>访问钱包网站</span>
           </a>
         </div>
       </div>
