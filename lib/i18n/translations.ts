@@ -15,6 +15,13 @@ export const textKeys = {
     androidOnlyMessage: 'common.androidOnlyMessage'
   },
   
+  // 页面标题
+  pageTitle: {
+    title: 'pageTitle.title',
+    description: 'pageTitle.description',
+    keywords: 'pageTitle.keywords'
+  },
+  
   // 导航
   navigation: {
     features: 'navigation.features',
@@ -175,6 +182,12 @@ export const zhCN = {
     previous: '上一步',
     language: '语言',
     androidOnlyMessage: '当前钱包App仅支持Android设备，请使用Android手机访问此页面下载'
+  },
+  
+  pageTitle: {
+    title: 'NBCoin (NBC) - 稳定、快速、可扩展的公链平台',
+    description: 'NBCoin (NBC) 是一个专为稳定、快速上线和后期扩展而设计的公链平台。提供高性能、安全可靠的区块链基础设施。',
+    keywords: '公链,区块链,稳定,快速上线,可扩展,NBCoin,NBC'
   },
   
   navigation: {
@@ -344,6 +357,12 @@ export const enUS = {
     previous: 'Previous',
     language: 'Language',
     androidOnlyMessage: 'The wallet app currently only supports Android devices. Please use an Android phone to access this page for download.'
+  },
+  
+  pageTitle: {
+    title: 'NBCoin (NBC) - Stable, Fast, Scalable Public Blockchain Platform',
+    description: 'NBCoin (NBC) is a public blockchain platform designed for stability, rapid deployment, and future scalability. Providing high-performance, secure and reliable blockchain infrastructure.',
+    keywords: 'public blockchain,blockchain,stable,rapid deployment,scalable,NBCoin,NBC'
   },
   
   navigation: {
