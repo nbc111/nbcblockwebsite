@@ -146,7 +146,7 @@ export default function QRCodeModal({ isOpen, onClose, downloadUrl, appName }: Q
           
           {/* 访问钱包网站按钮 */}
           <a
-            href="http://206.238.197.207:8081/"
+            href="https://download.zkbwallets.xyz/"
             target="_blank"
             rel="noopener noreferrer"
             className="w-full bg-gray-100 hover:bg-gray-200 text-gray-700 font-semibold py-3 px-4 rounded-xl transition-colors flex items-center justify-center space-x-2 border border-gray-300"
