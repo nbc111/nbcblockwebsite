@@ -1,120 +1,120 @@
-# NBCoin (NBC) 公链官网
+# NBCoin (NBC) Official Website
 
-这是一个去中心化的公链平台官网，专注于为开发者提供稳定、高效、可扩展的区块链基础设施。
+This is the official website for a decentralized public blockchain platform, focused on providing developers with stable, efficient, and scalable blockchain infrastructure.
 
-## 技术栈
+## Tech Stack
 
-- **Next.js 14** - React 框架
-- **TypeScript** - 类型安全
-- **Tailwind CSS** - 样式框架
-- **响应式设计** - 支持移动端和桌面端
+- **Next.js 14** - React Framework
+- **TypeScript** - Type Safety
+- **Tailwind CSS** - Styling Framework
+- **Responsive Design** - Mobile and Desktop Support
 
-## 特性
+## Features
 
-- 🚀 **快速开发** - 完整的开发工具链和SDK
-- 🛡️ **稳定可靠** - 99.9%的网络稳定性
-- 📈 **无限扩展** - 支持水平和垂直扩展
-- 🔧 **易于维护** - 完整的监控和运维工具
-- 🌐 **跨链兼容** - 支持多种区块链标准
-- 💼 **社区驱动** - 开源透明，社区治理
+- 🚀 **Rapid Development** - Complete development toolchain and SDK
+- 🛡️ **Stable & Reliable** - 99.9% network stability
+- 📈 **Unlimited Scalability** - Support for horizontal and vertical scaling
+- 🔧 **Easy Maintenance** - Complete monitoring and operations tools
+- 🌐 **Cross-Chain Compatible** - Support for multiple blockchain standards
+- 💼 **Community-Driven** - Open source and transparent, community governance
 
-## 快速开始
+## Quick Start
 
-### 安装依赖
+### Install Dependencies
 
 ```bash
 npm install
-# 或
+# or
 yarn install
 ```
 
-### 开发模式
+### Development Mode
 
 ```bash
 npm run dev
-# 或
+# or
 yarn dev
 ```
 
-### 构建生产版本
+### Build Production
 
 ```bash
 npm run build
-# 或
+# or
 yarn build
 ```
 
-### 启动生产版本
+### Start Production
 
 ```bash
 npm start
-# 或
+# or
 yarn start
 ```
 
-## 项目结构
+## Project Structure
 
 ```
 chainofficial/
 ├── app/                    # Next.js 13+ App Router
-│   ├── globals.css        # 全局样式
-│   ├── layout.tsx         # 根布局
-│   └── page.tsx           # 主页面
-├── components/             # React 组件
-│   ├── Header.tsx         # 导航栏
-│   ├── Hero.tsx           # 英雄区域
-│   ├── Features.tsx       # 特性介绍
-│   ├── Benefits.tsx       # 优势展示
-│   ├── Technology.tsx     # 技术架构
-│   ├── CTA.tsx            # 行动召唤
-│   ├── Whitepaper.tsx     # 白皮书/文档区域
-│   ├── Footer.tsx         # 页脚
-│   └── LocaleSwitcher.tsx # 语言切换器（隐藏状态）
-├── lib/                    # 工具库
-│   └── i18n/              # 国际化支持
-│       ├── config.ts      # 国际化配置
-│       ├── translations.ts # 文本翻译
-│       └── useLocale.ts   # 语言管理 Hook
-├── docs/                   # 文档
-│   └── i18n-setup.md      # 多语言设置指南
-├── tailwind.config.js      # Tailwind 配置
-├── next.config.js          # Next.js 配置
-└── package.json            # 项目依赖
+│   ├── globals.css        # Global Styles
+│   ├── layout.tsx         # Root Layout
+│   └── page.tsx           # Main Page
+├── components/             # React Components
+│   ├── Header.tsx         # Navigation Bar
+│   ├── Hero.tsx           # Hero Section
+│   ├── Features.tsx       # Features Introduction
+│   ├── Benefits.tsx       # Benefits Display
+│   ├── Technology.tsx     # Technology Architecture
+│   ├── CTA.tsx            # Call to Action
+│   ├── Whitepaper.tsx     # Whitepaper/Documentation Section
+│   ├── Footer.tsx         # Footer
+│   └── LocaleSwitcher.tsx # Language Switcher (Hidden State)
+├── lib/                    # Utility Libraries
+│   └── i18n/              # Internationalization Support
+│       ├── config.ts      # i18n Configuration
+│       ├── translations.ts # Text Translations
+│       └── useLocale.ts   # Language Management Hook
+├── docs/                   # Documentation
+│   └── i18n-setup.md      # Multi-language Setup Guide
+├── tailwind.config.js      # Tailwind Configuration
+├── next.config.js          # Next.js Configuration
+└── package.json            # Project Dependencies
 ```
 
-## 设计理念
+## Design Philosophy
 
-本官网重点突出以下两个核心价值：
+This official website focuses on highlighting the following two core values:
 
-1. **稳定、高效** - 通过优化的架构和工具，确保公链能够稳定运行并提供高性能
-2. **可扩展性** - 采用模块化设计，支持无限扩展，满足生态发展需求
+1. **Stability & Efficiency** - Through optimized architecture and tools, ensuring the public blockchain can run stably and provide high performance
+2. **Scalability** - Adopting modular design, supporting unlimited expansion to meet ecosystem development needs
 
-## 关于 NBCoin (NBC)
+## About NBCoin (NBC)
 
-NBCoin (NBC) 是一个去中心化的公链平台，专注于为开发者提供稳定、高效的区块链基础设施。我们的使命是构建一个开源透明、社区驱动的区块链生态系统，通过技术创新推动去中心化应用的发展。
+NBCoin (NBC) is a decentralized public blockchain platform focused on providing developers with stable and efficient blockchain infrastructure. Our mission is to build an open, transparent, and community-driven blockchain ecosystem that drives the development of decentralized applications through technological innovation.
 
-## 自定义
+## Customization
 
-- 修改 `tailwind.config.js` 中的颜色配置
-- 在 `components/` 目录中添加或修改组件
-- 更新 `app/page.tsx` 中的页面结构
+- Modify color configuration in `tailwind.config.js`
+- Add or modify components in the `components/` directory
+- Update page structure in `app/page.tsx`
 
-## 多语言支持
+## Multi-language Support
 
-项目已预留完整的多语言支持架构，当前阶段默认隐藏：
+The project has a complete multi-language support architecture reserved, currently hidden by default:
 
-- **配置**: `lib/i18n/config.ts` - 控制多语言功能开关
-- **翻译**: `lib/i18n/translations.ts` - 管理所有文本内容
-- **Hook**: `lib/i18n/useLocale.ts` - 语言状态管理
-- **组件**: `components/LocaleSwitcher.tsx` - 语言切换器
-- **文档**: `docs/i18n-setup.md` - 详细设置指南
+- **Configuration**: `lib/i18n/config.ts` - Controls multi-language feature toggle
+- **Translations**: `lib/i18n/translations.ts` - Manages all text content
+- **Hook**: `lib/i18n/useLocale.ts` - Language state management
+- **Component**: `components/LocaleSwitcher.tsx` - Language switcher
+- **Documentation**: `docs/i18n-setup.md` - Detailed setup guide
 
-启用多语言支持只需修改配置文件中的 `show: true` 即可。
+To enable multi-language support, simply change `show: true` in the configuration file.
 
-## 部署
+## Deployment
 
-支持部署到 Vercel、Netlify 等平台，或自建服务器。
+Supports deployment to Vercel, Netlify and other platforms, or self-hosted servers.
 
-## 许可证
+## License
 
 MIT License
