@@ -60,7 +60,10 @@ export default function Header() {
           <div className="hidden md:flex items-center space-x-4">
             <LocaleSwitcher />
             <button 
-              onClick={() => window.open('https://docs.nbcoin.io', '_blank')}
+              onClick={() => {
+                // 暂时屏蔽点击事件
+                // 按钮样式保持不变
+              }}
               className="btn-primary cursor-pointer"
             >
               {t('navigation.developers')}
@@ -98,7 +101,10 @@ export default function Header() {
               <MobileLocaleSwitcher />
               <div className="pt-4">
                 <button 
-                  onClick={() => window.open('https://docs.nbcoin.io', '_blank')}
+                  onClick={() => {
+                    // 暂时屏蔽点击事件
+                    // 按钮样式保持不变
+                  }}
                   className="btn-primary w-full cursor-pointer"
                 >
                   {t('navigation.developers')}

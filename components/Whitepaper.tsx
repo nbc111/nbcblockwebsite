@@ -75,8 +75,11 @@ export default function Whitepaper() {
           {documents.map((doc, index) => (
             <div
               key={index}
-              className="bg-chain-secondary p-6 rounded-xl border border-chain-accent/20 hover:border-chain-highlight/50 transition-all duration-300 hover:transform hover:scale-105 cursor-pointer"
-              onClick={() => window.open(doc.link, '_blank')}
+              className="bg-chain-secondary p-6 rounded-xl border border-chain-accent/20 transition-all duration-300 opacity-60 cursor-not-allowed"
+              onClick={() => {
+                // 暂时屏蔽所有点击事件
+                // 所有项目都不可点击
+              }}
             >
               <div className="text-4xl mb-4">{doc.icon}</div>
               <h3 className="text-xl font-semibold text-white mb-2">

@@ -42,10 +42,10 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold text-white mb-4">{t('footer.products')}</h3>
             <ul className="space-y-2">
-              <li><a href="https://app.nbcoin.io/deploy" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">{t('footer.chainDeployment')}</a></li>
-              <li><a href="https://app.nbcoin.io/nodes" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">{t('footer.nodeManagement')}</a></li>
-              <li><a href="https://docs.nbcoin.io/smart-contracts" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">{t('footer.smartContracts')}</a></li>
-              <li><a href="https://app.nbcoin.io/bridge" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">{t('footer.crossChainBridge')}</a></li>
+              <li><span onClick={() => {/* 暂时屏蔽点击事件 */}} className="text-gray-300 hover:text-white transition-colors cursor-pointer">{t('footer.chainDeployment')}</span></li>
+              <li><span onClick={() => {/* 暂时屏蔽点击事件 */}} className="text-gray-300 hover:text-white transition-colors cursor-pointer">{t('footer.nodeManagement')}</span></li>
+              <li><span onClick={() => {/* 暂时屏蔽点击事件 */}} className="text-gray-300 hover:text-white transition-colors cursor-pointer">{t('footer.smartContracts')}</span></li>
+              <li><span onClick={() => {/* 暂时屏蔽点击事件 */}} className="text-gray-300 hover:text-white transition-colors cursor-pointer">{t('footer.crossChainBridge')}</span></li>
             </ul>
           </div>
 
@@ -53,10 +53,10 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold text-white mb-4">{t('footer.support')}</h3>
             <ul className="space-y-2">
-              <li><a href="https://docs.nbcoin.io" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">{t('footer.documentation')}</a></li>
-              <li><a href="mailto:support@nbcoin.io" className="text-gray-300 hover:text-white transition-colors">{t('footer.technicalSupport')}</a></li>
-              <li><a href="https://forum.nbcoin.io" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">{t('footer.communityForum')}</a></li>
-              <li><a href="mailto:contact@nbcoin.io" className="text-gray-300 hover:text-white transition-colors">{t('footer.contactUs')}</a></li>
+              <li><span onClick={() => {/* 暂时屏蔽点击事件 */}} className="text-gray-300 hover:text-white transition-colors cursor-pointer">{t('footer.documentation')}</span></li>
+              <li><span onClick={() => {/* 暂时屏蔽点击事件 */}} className="text-gray-300 hover:text-white transition-colors cursor-pointer">{t('footer.technicalSupport')}</span></li>
+              <li><span onClick={() => {/* 暂时屏蔽点击事件 */}} className="text-gray-300 hover:text-white transition-colors cursor-pointer">{t('footer.communityForum')}</span></li>
+              <li><span onClick={() => {/* 暂时屏蔽点击事件 */}} className="text-gray-300 hover:text-white transition-colors cursor-pointer">{t('footer.contactUs')}</span></li>
             </ul>
           </div>
         </div>
@@ -66,9 +66,9 @@ export default function Footer() {
             © 2025 NBCoin (NBC). {t('footer.allRightsReserved')}
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <a href="https://nbcoin.io/privacy" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white text-sm transition-colors">{t('footer.privacyPolicy')}</a>
-            <a href="https://nbcoin.io/terms" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white text-sm transition-colors">{t('footer.termsOfService')}</a>
-            <a href="https://nbcoin.io/cookies" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white text-sm transition-colors">{t('footer.cookiePolicy')}</a>
+            <span onClick={() => {/* 暂时屏蔽点击事件 */}} className="text-gray-400 hover:text-white text-sm transition-colors cursor-pointer">{t('footer.privacyPolicy')}</span>
+            <span onClick={() => {/* 暂时屏蔽点击事件 */}} className="text-gray-400 hover:text-white text-sm transition-colors cursor-pointer">{t('footer.termsOfService')}</span>
+            <span onClick={() => {/* 暂时屏蔽点击事件 */}} className="text-gray-400 hover:text-white text-sm transition-colors cursor-pointer">{t('footer.cookiePolicy')}</span>
           </div>
         </div>
       </div>

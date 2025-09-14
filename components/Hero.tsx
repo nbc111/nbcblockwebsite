@@ -20,13 +20,19 @@ export default function Hero() {
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <button 
-              onClick={() => window.open('https://docs.nbcoin.io', '_blank')}
+              onClick={() => {
+                // 暂时屏蔽点击事件
+                // 按钮样式保持不变
+              }}
               className="btn-primary text-lg px-8 py-4 cursor-pointer"
             >
               {t('hero.startBuilding')}
             </button>
             <button 
-              onClick={() => document.getElementById('whitepaper')?.scrollIntoView({ behavior: 'smooth' })}
+              onClick={() => {
+                // 暂时屏蔽点击事件
+                // 按钮样式保持不变
+              }}
               className="btn-secondary text-lg px-8 py-4 cursor-pointer"
             >
               {t('hero.learnMore')}

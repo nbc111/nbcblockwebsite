@@ -18,13 +18,19 @@ export default function CTA() {
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <button 
-              onClick={() => window.open('https://docs.nbcoin.io', '_blank')}
+              onClick={() => {
+                // 暂时屏蔽点击事件
+                // 按钮样式保持不变
+              }}
               className="bg-white text-chain-highlight hover:bg-gray-100 font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 text-lg cursor-pointer"
             >
               {t('cta.viewDocs')}
             </button>
             <button 
-              onClick={() => window.open('https://github.com/nbcoin', '_blank')}
+              onClick={() => {
+                // 暂时屏蔽点击事件
+                // 按钮样式保持不变
+              }}
               className="border-2 border-white text-white hover:bg-white hover:text-chain-highlight font-semibold py-4 px-8 rounded-lg transition-all duration-300 text-lg cursor-pointer"
             >
               {t('cta.contributeCode')}
@@ -32,12 +38,13 @@ export default function CTA() {
           </div>
           
           <div className="mt-8 text-white/80">
-            <p>{t('cta.developerQuestion')} <a 
-              href="https://docs.nbcoin.io/developers" 
-              target="_blank" 
-              rel="noopener noreferrer"
+            <p>{t('cta.developerQuestion')} <span 
+              onClick={() => {
+                // 暂时屏蔽点击事件
+                // 链接样式保持不变
+              }}
               className="underline hover:text-white transition-colors cursor-pointer"
-            >{t('cta.developerGuide')}</a></p>
+            >{t('cta.developerGuide')}</span></p>
           </div>
         </div>
       </div>
