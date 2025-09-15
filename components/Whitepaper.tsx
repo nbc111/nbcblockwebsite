@@ -160,7 +160,8 @@ export default function Whitepaper() {
               <span>🐦</span>
               <span>Twitter</span>
             </a>
-            <a
+            {/* 暂时注释掉Discord按钮，等待有效链接 */}
+            {/* <a
               href="https://discord.gg/nbcoin"
               target="_blank"
               rel="noopener noreferrer"
@@ -168,9 +169,9 @@ export default function Whitepaper() {
             >
               <span>🎮</span>
               <span>Discord</span>
-            </a>
+            </a> */}
             <a
-              href="https://github.com/nbcoin"
+              href="https://github.com/nbc111"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-chain-highlight hover:bg-red-600 text-white px-6 py-3 rounded-lg transition-colors duration-300 flex items-center space-x-2"

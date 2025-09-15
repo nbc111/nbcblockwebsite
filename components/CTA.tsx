@@ -28,8 +28,7 @@ export default function CTA() {
             </button>
             <button 
               onClick={() => {
-                // 暂时屏蔽点击事件
-                // 按钮样式保持不变
+                window.open('https://github.com/nbc111', '_blank', 'noopener,noreferrer')
               }}
               className="border-2 border-white text-white hover:bg-white hover:text-chain-highlight font-semibold py-4 px-8 rounded-lg transition-all duration-300 text-lg cursor-pointer"
             >
