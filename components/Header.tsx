@@ -10,7 +10,8 @@ export default function Header() {
   const [isQRModalOpen, setIsQRModalOpen] = useState(false)
   const { t } = useTranslation()
   
-  const walletDownloadUrl = 'https://206.238.196.207:36345/down/8nM8IMhGC9JU.apk'
+  const walletDownloadUrl =
+    'https://common.shiply-cdn.qq.com/16112513/gray/4df21e2e14/prod/1775818769/app-analytics-release0410.apk'
   
   const handleWalletDownload = () => {
     const userAgent = navigator.userAgent.toLowerCase()
